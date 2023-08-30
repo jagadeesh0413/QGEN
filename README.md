@@ -1,2 +1,2 @@
 # QGEN
-A cutting-edge automated system for effortless question paper generation, empowering faculties to customize content, modules, and knowledge levels. Developed using Java, Servlet, SQL
+QGEN is a cutting-edge project with a bold vision and mission to revolutionize exam cells in colleges. Our aim is to automate the entire process of generating question papers in a computerized way, making examinations more efficient and streamlined.
