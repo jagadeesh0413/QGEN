@@ -1,16 +1,23 @@
 # QGEN
-QGEN is a cutting-edge project with a bold vision and mission to revolutionize exam cells in colleges. Our aim is to automate the entire process of generating question papers in a computerized way, making examinations more efficient and streamlined.
--Devised QGEN, an automated system generating question papers in seconds with minimal effort.
--Enabled faculty to customize content, modules, and difficulty, reducing prep time by 70%.
--Streamlined paper generation, cutting resource allocation by 60%.
--Developed using Java, Servlet, and SQL
+QGEN is a cutting-edge project with a bold vision and mission to revolutionize exam cells in colleges.
 
-In simpler terms, we took what we learned about building websites with Java and turned it into a practical project.
+**Simplifying Knowledge into Practical Innovation**
 
-We harnessed a range of technologies to bring our project to life, including:
+Our journey began with transforming Java-based web development concepts into real-world application. Leveraging an array of technologies, we breathed life into our project:
 
-- HTML, CSS, and JavaScript for crafting an interactive user interface
-- Java with DBUtil, OJDBC, and Servlet API for robust backend development
-- Oracle SQL for efficient and structured data management
-- Tomcat server for seamless deployment and testing
+- Crafted interactive UI with HTML, CSS, and JavaScript.
+- Engineered robust backend using Java, DBUtil, OJDBC, and Servlet API.
+- Employed Oracle SQL for efficient data management.
+- Ensured seamless deployment and testing via Tomcat server.
+
+Welcome to our GitHub repository - where ideas meet execution. Dive in and explore the amalgamation of theory and hands-on mastery!
+
+# Project Highlights
+🚀 Practical Java Web Development
+🎨 Engaging User Interface with HTML/CSS/JS
+💡 Efficient Backend with Java and DB Technologies
+📊 Structured Data Management using Oracle SQL
+🌐 Seamless Deployment and Testing via Tomcat Server
+
+Let's embark on this coding expedition together! 🌟
 
