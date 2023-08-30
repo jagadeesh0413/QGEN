@@ -1,0 +1,73 @@
+To add faculty
+ 
+create table addfaculty
+(
+    username varchar2(50),
+    password varchar2(30)
+);
+
+
+To add faculty bio
+
+create table addfacultybio
+(
+   name varchar2(50),
+   department varchar2(50),
+   email varchar2(50),
+   qualification varchar2(50),
+   mobileno varchar2(50)
+);
+
+To add student
+
+create table addstudent
+(
+    name varchar2(20),
+    rollno varchar2(20)
+);
+
+To create table addstudentbio
+
+create table addstudentbio
+(
+  name varchar(50),
+  department varchar2(50),
+  email varchar2(50),
+  qualification varchar2(50),
+  mobileno varchar2(50)
+);
+
+
+To create table  adminvalidation
+create table  adminvalidation
+(
+  username varchar2(20),
+   password varchar2(20)
+);
+
+
+To create table qpgen
+
+create table qpgen
+(
+   question varchar2(1234),
+    mark varchar2(10),
+    co_level varchar2(10),
+    k_level varchar2(10)
+);
+
+To create table qpartb
+
+create table qpartb
+(
+    question1 varchar2(2000),
+    mark1 varchar2(10),
+    co_level1 varchar2(10),
+    k_level1 varchar2(10),
+    question2 varchar2(2000),
+    mark2 varchar2(10),
+    co_level2 varchar2(10),
+    k_level2 varchar2(10)
+);
+
+

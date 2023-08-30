@@ -1,0 +1,285 @@
+SQL Queries
+
+create table addfaculty
+(
+    username varchar2(50),
+    password varchar2(30)
+);
+
+create table addfacultybio
+(
+   name varchar2(50),
+   department varchar2(50),
+   email varchar2(50),
+   qualification varchar2(50),
+   mobileno varchar2(50)
+);
+
+create table addstudent
+(
+    name varchar2(20),
+    rollno varchar2(20)
+);
+
+create table addstudentbio
+(
+  name varchar(50),
+  department varchar2(50),
+  email varchar2(50),
+  qualification varchar2(50),
+  mobileno varchar2(50)
+);
+
+create table  adminvalidation
+(
+  username varchar2(20),
+   password varchar2(20)
+);
+
+
+
+create table qpgen
+(
+   question varchar2(1234),
+    mark varchar2(10),
+    co_level varchar2(10),
+    k_level varchar2(10)
+);
+
+create table qpartb
+(
+    question1 varchar2(2000),
+    mark1 varchar2(10),
+    co_level1 varchar2(10),
+    k_level1 varchar2(10),
+    question2 varchar2(2000),
+    mark2 varchar2(10),
+    co_level2 varchar2(10),
+    k_level2 varchar2(10)
+);
+
+
+
+-- Question 1
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Explain any four features of java programming.', '2', 'CO1', 'K1');
+
+-- Question 2
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('What is type casting? Explain its types with proper syntax and example.', '2', 'CO2', 'K2');
+
+-- Question 3
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('State & explain scope of variable with an example.', '2', 'CO1', 'K3');
+
+-- Question 4
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Define a class and object. Write syntax to create class and object with an Example.', '2', 'CO2', 'K1');
+
+-- Question 5
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Write a java program to display all the odd numbers between 1 to 30 using for loop & if statement.', '2', 'CO1', 'K2');
+
+-- Question 6
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Explain following bitwise operator with an example : left shift operator, right shift operator', '2', 'CO2', 'K3');
+
+-- Question 7
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Explain any two relational operators in Java with example.', '2', 'CO1', 'K1');
+
+-- Question 8
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Write a program to find sum of digit of number entered by user.', '2', 'CO2', 'K2');
+
+-- Question 9
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Write all primitive data types available in Java with their storage sizes in bytes.', '2', 'CO1', 'K3');
+
+-- Question 10
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Write a program to generate Fibonacci series 1 1 2 3 5 8 13 21 34 55 89.', '2', 'CO2', 'K1');
+
+-- Question 11
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Why java became platform independent language? Explain.', '2', 'CO1', 'K2');
+
+-- Question 12
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Write a program to check whether the given number is prime or not.', '2', 'CO2', 'K3');
+
+-- Question 13
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Write a program to accept two numbers as command line arguments and print the addition of those numbers.', '2', 'CO1', 'K1');
+
+-- Question 14
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Write a program to accept number from the command line and print the square root of the number.', '2', 'CO2', 'K2');
+
+-- Question 15
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Write a java program to implement visibility controls such as public, private, protected access modes. Assume suitable data, if any.', '2', 'CO1', 'K3');
+
+-- Question 16
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('State & explain scope of variable with an example.', '2', 'CO2', 'K1');
+
+-- Question 17
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Explain byte stream class in detail.', '2', 'CO1', 'K2');
+
+-- Question 18
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Write a java program to implement the following functions of string: a. Calculate length of string b. Compare between strings c. Concatenating strings', '2', 'CO2', 'K3');
+
+-- Question 19
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Enlist types of constructor. Explain any two with examples.', '2', 'CO1', 'K1');
+
+-- Question 20
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Explain ArrayList & Iterator methods of collections with an example.', '2', 'CO2', 'K2');
+
+-- Question 21
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Write a program to add 2 integers, 2 strings, and 2 float objects to a vector. Remove the element specified by the user and display the list.', '2', 'CO1', 'K3');
+
+-- Question 22
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Explain the following methods of the string class with syntax and examples: (i) substring() (ii) replace()', '2', 'CO2', 'K1');
+
+-- Question 23
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('What is the Iterator class? Give syntax and use of any two methods of the Iterator class.', '2', 'CO1', 'K2');
+
+-- Question 24
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('State three uses of the final keyword.', '2', 'CO2', 'K3');
+
+-- Question 25
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('What is garbage collection in Java? Explain the finalize method in Java.', '2', 'CO1', 'K1');
+
+-- Question 26
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('What is the use of the ArrayList class? State any two methods with their use from ArrayList.', '2', 'CO2', 'K2');
+
+-- Question 27
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Write any two methods of the ArrayList class with their syntax.', '2', 'CO1', 'K3');
+
+-- Question 28
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Define a class person with data member as Aadharno, name, Panno implement concept of constructor overloading. Accept data for 5 objects and print it.', '2', 'CO2', 'K1');
+
+-- Question 29
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Describe the following string class methods with examples: (i) compareTo() (ii) equalsIgnoreCase()', '2', 'CO1', 'K2');
+
+-- Question 30
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('What is the use of wrapper classes in Java? Explain the float wrapper with its methods.', '2', 'CO2', 'K3');
+
+-- Question 31
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Describe access control specifiers with examples.', '2', 'CO1', 'K1');
+
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Define a class and object. Write syntax to create class and object with an example.', '2', 'CO2', 'K2');
+
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Illustrate with an example the use of switch case statement.', '2', 'CO1', 'K3');
+
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Explain any four mathematical functions.', '2', 'CO2', 'K1');
+
+INSERT INTO qpgen (question, mark, co_level, k_level)
+VALUES ('Explain with an example labeled for loop.', '2', 'CO1', 'K2');
+  Part b
+-- Questions 1 and 2
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) What is an array? How arrays are declared and initialized? Explain with examples.', '8', 'CO1', 'K2', '(ii) Write a Java program to check the given string is a palindrome or not.', '8', 'CO2', 'K3');
+
+-- Questions 3 and 4
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) Differentiate method overloading with method overriding with examples.', '8', 'CO2', 'K3', '(ii) What is an interface? How to create it and access it? Explain with an example.', '8', 'CO1', 'K2');
+
+-- Questions 5 and 6
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) Explain about java.lang.thread package.', '8', 'CO1', 'K1', '(ii) How to set priorities for threads? Discuss with examples.', '8', 'CO2', 'K2');
+
+-- Questions 7 and 8
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) Discuss different event classes.', '6', 'CO2', 'K2', '(ii) Write a Java program using listeners for handling keyboard events.', '10', 'CO1', 'K3');
+
+-- Questions 9 and 10
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) Illustrate constructor overloading.', '8', 'CO1', 'K3', '(ii) Explain precedence rules and associativity concept.', '8', 'CO2', 'K2');
+
+-- Questions 11 and 12
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) With suitable code segments illustrate various uses of ‘final’ keyword.', '8', 'CO2', 'K3', '(ii) How to handle multiple catch blocks for a nested try block? Explain with an example.', '8', 'CO1', 'K1');
+
+-- Questions 13 and 14
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) Describe Java’s thread model.', '7', 'CO1', 'K2', '(ii) What is a stream? What is the difference between byte streams and character streams? How are they used to capture input from the user?', '9', 'CO2', 'K3');
+
+-- Questions 15 and 16
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) What is the role of event listeners in event handling? List the Java event listeners.', '8', 'CO2', 'K1', '(ii) Write an applet to display the mouse cursor position in that applet window.', '8', 'CO1', 'K2');
+
+-- Questions 17 and 18
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) Discuss various AWT containers with examples.', '8', 'CO1', 'K3', '(ii) Construct an application to explain the use of JTabbedPane.', '8', 'CO2', 'K2');
+
+-- Questions 19 and 20
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) What are the drawbacks of procedural languages? Explain the need of object-oriented programming with a suitable program.', '10', 'CO2', 'K3', '(ii) Discuss the lexical issues of Java.', '6', 'CO1', 'K1');
+
+-- Questions 21 and 22
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) List various types of statements and quote suitable examples for each type.', '9', 'CO1', 'K1', '(ii) With a program, illustrate the use of command line arguments.', '7', 'CO2', 'K2');
+
+-- Questions 23 and 24
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) Explain multilevel inheritance with the help of an abstract class in your program.', '8', 'CO2', 'K1', '(ii) How to define a user exception in a program? Illustrate with an example.', '8', 'CO1', 'K3');
+
+-- Questions 25 and 26
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) Write a program to implement multithread programming.', '10', 'CO1', 'K2', '(ii) Explain thread synchronization.', '6', 'CO2', 'K1');
+
+-- Questions 27 and 28
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) Explain delegation event model in detail.', '8', 'CO1', 'K3', '(ii) Write an applet to display a smiley with a greeting message to the user.', '8', 'CO2', 'K2');
+
+-- Questions 29 and 30
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) What is the significance of Layout managers? Discuss briefly various layout managers.', '10', 'CO2', 'K1', '(ii) Write a note on split Pane.', '6', 'CO1', 'K3');
+
+-- Questions 31 and 32
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) Discuss the principles of object-oriented languages in detail.', '10', 'CO1', 'K2', '(ii) What is the role and responsibility of JVM in program execution?', '6', 'CO2', 'K1');
+
+-- Questions 33 and 34
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) What are the primitive data types in Java? Write about type conversions.', '8', 'CO2', 'K3', '(ii) What is a constructor? What is its requirement in programming? Explain with a program.', '8', 'CO1', 'K2');
+
+-- Questions 35 and 36
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) Write a program to implement multiple inheritances.', '8', 'CO1', 'K3', '(ii) What is an exception? How are exceptions handled in Java programming? Explain.', '8', 'CO2', 'K2');
+
+-- Questions 37 and 38
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) Describe the need for thread synchronization. How is it achieved in Java programming? Explain with a suitable program.', '10', 'CO2', 'K1', '(ii) Differentiate between FileReader and BufferedReader.', '6', 'CO1', 'K3');
+
+-- Questions 39 and 40
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) What is an applet? Explain its life cycle.', '8', 'CO1', 'K2', '(ii) Write a program to handle mouse events and mouse motion events.', '8', 'CO2', 'K1');
+
+-- Questions 41 and 42
+INSERT INTO qpartb (question1, mark1, co_level1, k_level1, question2, mark2, co_level2, k_level2)
+VALUES ('(i) Discuss various AWT containers with examples.', '8', 'CO2', 'K3', '(ii) Construct an application to explain the use of JTabbedPane.', '8', 'CO1', 'K2');
+
+
+
+

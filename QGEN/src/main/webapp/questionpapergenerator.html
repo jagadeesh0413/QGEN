@@ -1,0 +1,462 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Paper Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #222;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #ddd;
+            margin: 0 0 15px;
+        }
+
+        label {
+            display: block;
+            color: #ccc;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        input[type="date"],
+        input[type="time"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #444;
+            border-radius: 4px;
+            box-shadow: none;
+            margin-bottom: 20px;
+            background-color: #333;
+            color: #ddd;
+        }
+
+        select {
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6l-6-6l1.41-1.41z'/%3E%3C/svg%3E") no-repeat right #444;
+            background-position-x: 98%;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            background-color: #38d39f;
+            color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 4px;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 2px 2px 7px #38d39f70;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Well! Now you can generate a question paper.</h1>
+
+        <h2>K Levels</h2>
+        <p>
+            K1 - Remembering and recalling facts with specific answers<br>
+            K2 - Basic understanding of facts and stating main ideas with general answers<br>
+            K3 - Application-oriented - Solving Problems
+        </p>
+
+        <h2>CO Levels (Course Outcome)</h2>
+        <p>
+            CO1 - To understand the process of communication and the principles of effective communication in business.<br>
+            CO2 - To study the nature, importance, and scope of business communication.
+        </p>
+
+        <form name="question" action="QuestionPaperGenerator">
+            <label>Enter type of examination</label>
+            <select name="examname" onchange="handleExamNameChange(this)">
+                <option value="" disabled selected>Please select exam type</option>
+                <option value="Continuous Internal Assesment -I">Continuous Internal Assesment -I</option>
+                <option value="Continuous Internal Assesment -II">Continuous Internal Assesment -II</option>
+                <option value="Continuous Internal Assesment -III">Continuous Internal Assesment -III</option>
+                <option value="End Semester Examination">End Semester Examination</option>
+                <option value="Others">Others</option>
+            </select>
+
+            <div id="otherExamNameDiv" style="display:none;">
+                <label>Other Examination Type</label>
+                <input type="text" name="otherExamName">
+            </div>
+
+            <label>Enter Course name & Course code</label>
+            <select name="course" onchange="handleCourseChange(this)">
+                <option value="" disabled selected>Please select a course</option>
+                <option value="18PD10">Data Warehousing and Data Mining</option>
+                <option value="18PD19">Principles of Compiler Deisgn</option>
+                <option value="18ID29">Data Visualization</option>
+                <option value="18ID14">Machine Learning Techniques</option>
+                <option value="18SE02">Software Defined Networks</option>
+                <option value="Others">Others</option>
+            </select>
+
+            <div id="otherCourseDiv" style="display:none;">
+                <label>Other Course Name & Course Code</label>
+                <input type="text" name="otherCourse">
+            </div>
+
+            <label>Enter date of Examination</label>
+            <input type="date" name="date">
+
+            <label>Enter time allotted for Examination (hh:mm)</label>
+            <input type="time" name="time">
+
+            <label>Number of part A questions</label>
+            <input type="number" name="rownum" min="0">
+
+            <label>Number of part B questions</label>
+            <input type="number" name="rownum1" min="0">
+
+            <div class="btn-container">
+                <input type="submit" value="Generate Question paper">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function handleExamNameChange(selectElement) {
+            var otherExamNameDiv = document.getElementById("otherExamNameDiv");
+            if (selectElement.value === "Others") {
+                otherExamNameDiv.style.display = "block";
+            } else {
+                otherExamNameDiv.style.display = "none";
+            }
+        }
+
+        function handleCourseChange(selectElement) {
+            var otherCourseDiv = document.getElementById("otherCourseDiv");
+            if (selectElement.value === "Others") {
+                otherCourseDiv.style.display = "block";
+            } else {
+                otherCourseDiv.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Generate Question Paper</title>
+<style>
+        html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #121212; /* fallback for old browsers */
+  overflow-x: hidden;
+
+  height: 100%;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
+
+
+h1 {
+  color: white;
+
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.flex-container {
+  width: 100vw;
+
+  margin-top: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container {
+  width: 500px;
+  height: 350px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 500px;
+  height: 350px;
+
+  margin-top: 5px;
+  padding-top: 20px;
+
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  background: #1f1f1f;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.199);
+}
+
+.subtitle {
+  font-size: 11px;
+
+  color: rgba(177, 177, 177, 0.3);
+}
+
+input {
+  border: none;
+  border-bottom: solid rgb(143, 143, 143) 1px;
+
+  margin-bottom: 30px;
+
+  background: none;
+  color: rgba(255, 255, 255, 0.555);
+
+  height: 35px;
+  width: 300px;
+}
+
+.submit-btn {
+  cursor: pointer;
+
+  border: none;
+  border-radius: 8px;
+
+  box-shadow: 2px 2px 7px #38d39f70;
+
+  background: #38d39f;
+  color: rgba(255, 255, 255, 0.8);
+
+  width: 80px;
+
+  transition: all 1s;
+}
+
+.submit-btn:hover {
+  color: rgb(255, 255, 255);
+
+  box-shadow: none;
+}
+</style>
+</head>
+<body>
+  <div class="flex-container">
+     Part A - Container box 
+    <div class="content-container">
+      <div class="form-container">
+        <h1>Well! Now you can generate question paper.</h1>
+
+        <h2><b>K Levels</b></h2>
+        <p>
+          <ul>
+            <li>K1 - Remembering and recalling facts with specific answers</li>
+            <li>K2 - Basic understanding of facts and stating main ideas with general answers</li>
+            <li>K3 - Application oriented- Solving Problems</li>
+          </ul>
+        </p>
+
+        <h2><b>CO Levels (Course Outcome)</b></h2>
+        <p>
+          <ul>
+            <li>CO1 - To understand the process of communication and the principles of effective communication in business.</li>
+            <li>CO2 - To study the nature, importance, and scope of business communication.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    </div>
+
+  <div class="flex-container">
+     Part B - Container box 
+    <div class="content-container">
+      <div class="form-container">
+        <form name="question" action="QuestionPaperGenerator">
+          <label>Enter type of examination</label><br>
+          <input type="text" name="examname"><br>
+
+          <label>Enter Course name & Course code</label><br>
+          <input type="text" name="course"><br>
+
+          <label>Enter date of Examination</label><br>
+          <input type="date" name="date"><br>
+
+          <label>Enter time allotted for Examination</label><br>
+          <input type="text" name="time"><br>
+
+          <label>Number of part A questions</label><br>
+          <input type="number" name="rownum"><br>
+
+          <label>Number of part B questions</label><br>
+          <input type="number" name="rownum1"><br>
+
+          <input type="submit" value="Generate Question paper">
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Generate Question Paper</title>
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #5ba1c4; /* fallback for old browsers */
+  overflow-x: hidden;
+
+  height: 100%;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+h1{text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+<body>
+<h1>Well! Now you can generate question paper.</h1>
+
+<h2><b>K Levels</b></h2>
+<p>
+<ul>
+  <li>K1 - Remembering and recalling facts with specific answers</li>
+  <li>K2 - Basic understanding of facts and stating main ideas with general answers</li>
+  <li>K3 - Application oriented- Solving Problems</li>
+</ul>  
+</p>
+
+<h2><b>CO Levels (Course Outcome)</b></h2>
+<p>
+<ul>
+  <li>CO1 - To understand the process of communication and the principles of effective communication in business.  </li>
+  <li>CO2 - To study the nature, importance and the scope of business communication.</li>
+</ul>  
+</p>
+<div>  <form name="question" action="QuestionPaperGenerator">
+  <table>
+    <tr>
+  <td><label><p style="color:black">Enter type of examination</label></td>
+  <td><input type="text" name="examname"></td>
+  </tr>
+   <tr>
+  <td><label><p style="color:black">Enter Course name & Course code</label></td>
+  <td><input type="text" name="course"></td>
+  </tr>
+     <tr>
+  <td><label><p style="color:black">Enter date of Examination</label></td>
+  <td><input type="date" name="date"></td>
+  </tr>
+  <tr>
+  <td><label><p style="color:black">Enter time alloted for Examination</label></td>
+  <td><input type="text" name="time"></td>
+  </tr>
+  <tr>
+  <td><label><p style="color:black"> Number of part A questions</label> </td>
+   <td><input type="number" name="rownum"></td>
+  </tr>
+  <tr>
+  <td><label><p style="color:black">Number of part B questions</label></td>
+  <td><input type="number" name="rownum1"></td>
+  </tr>
+  <tr>
+  <td></td>
+  <td><input type="submit" value="Generate Question paper"></td>
+  </tr>
+ </table></form>
+</div>
+</body>
+</html>-->

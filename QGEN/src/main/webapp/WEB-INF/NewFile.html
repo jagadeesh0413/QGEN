@@ -1,0 +1,477 @@
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Student Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+</head>
+<body>
+
+ Navbar 
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">STUDENT</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CGPA CALCULATOR</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="Questionview.html" class="w3-bar-item w3-button">View Question Bank</a>
+        <a href="Studentbio.html" class="w3-bar-item w3-button">Update My Info</a>
+    
+      </div>
+    </div>
+
+  </div>
+</div>
+
+ Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) 
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+ Page content 
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+<br>
+   Images 
+  <div class="mySlides w3-display-container w3-center">
+    <img src="Student.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Student</h3>
+      <p><b>The only impossible journey is the one you never begin</b></p>   
+    </div>
+  </div>
+  
+
+   The Band Section 
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">STUDENT</h2>
+    <p class="w3-opacity"><i>KCE</i></p>
+    <p class="w3-justify">Students who have received a credential from the admin
+     can login to the system. The Student page is a convenient way to view grades,
+      credits,and it allows students to calculate their CGPA.Students can update their contact information,
+       view their semesters and quicken the registration process.
+        Students will have access to their data and can view the question banks 
+        provided by faculty. Students will be able to compare the questions to
+         other students' tests, and then proceed with understanding how they 
+         should answer that particular question.</p>
+    
+  </div>
+
+   The Tour Section 
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">CGPA calculation</h2>
+      <p class="w3-opacity w3-center"><i>Remember your grades!</i></p><br>
+
+     
+      <div class="w3-row-padding w3-padding-39" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+         
+          <div class="w3-container w3-white ">
+            <p><b>CGPA</b></p>
+            <p class="w3-opacity">Calculate</p>
+            <p>Calculate CGPA and find your grade points.</p>
+            <a href="https://cgpajio.edunify.in/cgpaconverter.php">Calculate</a>     
+            
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  
+   The Contact Section 
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-left">CONTACT</h2>
+    
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i>Coimbatore-32<br>
+        <i class="fa fa-phone" style="width:30px"></i> 6380497971<br>
+        <i class="fa fa-envelope" style="width:30px"> </i>karpagam.kce.2022@gmail.com<br>
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+ 
+ End Page Content 
+</div>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>-->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Faculty Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ CSS only 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+</head>
+<body>
+
+ Navbar 
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FACULTY</a>
+    <a href="questionpapergenerator.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">GENERATE QUESTION PAPER</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="AddStudent.html" class="w3-bar-item w3-button">Add Student</a>
+        <a href="Removestudent.html" class="w3-bar-item w3-button">Remove Student</a>
+        <a href="Facutlybio.html" class="w3-bar-item w3-button">Update My Info</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+ Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) 
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+ Page content 
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+<br>
+  Images 
+  <div class="mySlides w3-display-container w3-center">
+    <img src="Faculty.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Faculty</h3>
+      <p><b>Faculty are vital employees in our institution</b></p>   
+    </div>
+  </div>
+  
+
+   The Band Section 
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">FACULTY</h2>
+    <p class="w3-opacity"><i>Staffs</i></p>
+    <p class="w3-justify">Faculty are vital employees in our institution, who can add and remove
+     students from the system. This is a faculty page for an institution that allows
+      faculty to generate examination papers. Faculty can add and remove questions 
+      from the question bank, which will be randomly selected for students to answer.
+       Click on the 'add question' tab to add  questions to the question bank. 
+       Faculty can choose to allocate time for examination, course code, course name,
+        and the number of questions to display in the question paper.
+         Each choice can have a significant impact on how students will approach
+          the exam. It is important for instructors to be aware that there are 
+          many different ways they can design their exam questions.</p>
+    
+  </div>
+
+   The Tour Section 
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">Generate Question Paper </h2>
+      <p class="w3-opacity w3-center"><i>Remember to check question bank!</i></p><br>
+
+     
+      <div class="w3-row-padding w3-padding-39" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+         <form name="questionpapergenerator" action="questionpapergenerator.html">
+          <div class="w3-container w3-white ">
+            <p><b>Question Generation</b></p>
+            <p class="w3-opacity">Design</p>
+            <p>Ready to generate question paper.</p>
+            <input type="submit" value="Generate">
+            <br>
+        </form>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  
+
+   The Contact Section 
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-left">CONTACT</h2>
+    
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i>Coimbatore-32<br>
+        <i class="fa fa-phone" style="width:30px"></i> 6380497971<br>
+        <i class="fa fa-envelope" style="width:30px"> </i>karpagam.kce.2022@gmail.com<br>
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+ 
+ End Page Content 
+</div>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+ JavaScript Bundle with Popper 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Admin Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+</head>
+<body>
+
+ Navbar 
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ADMIN</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FACULTY INFORMATION</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="AddFaculty.html" class="w3-bar-item w3-button">Add Faculty</a>
+        <a href="Removefaculty.html" class="w3-bar-item w3-button">Remove Faculty</a>
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+
+ Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) 
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+ Page content 
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+<br>
+  Images 
+  <div class="mySlides w3-display-container w3-center">
+    <img src="adminA.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Admin</h3>
+      <p><b>Admin can be the controller of examinations.</b></p>   
+    </div>
+  </div>
+
+
+   The Band Section 
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">ADMIN</h2>
+    <p class="w3-opacity"><i>COE</i></p>
+    <p class="w3-justify">Admin can be the controller of examinations.You can see who is involved with the project by using admin.
+     You can also see all the new people who have joined on your log-in page and work 
+     with them by using admin status. Staff members can be added/removed/modified by 
+     use of their respective admins
+      It's important to know who is involved with your project in order to ensure
+       you're always up-to-date. The admin function of the dashboard can be used to 
+       see all the new people who have joined and assign them specific staff status. 
+       The administrator should manage both data in spreadsheets and reports.
+        The administrator should keep records and reports up to date. Even 
+        though it is difficult to manage data in spreadsheets, the administrator 
+        should still try to do so.
+     The records and reports are used to keep track of how the company is doing.
+      Spreadsheets are also useful for making sure that queries are up-to-date and accurate.</p>
+    
+  </div>
+
+   The Tour Section 
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">Faculty Information</h2>
+      <p class="w3-opacity w3-center"><i>Remember to update on date!</i></p><br>
+
+     
+      <div class="w3-row-padding w3-padding-39" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+         
+          <div class="w3-container w3-white ">
+          <form name="viewfacultydetails" action="ViewFacultyDeatils">
+            <p><b>EXAM CELL</b></p>
+            <p class="w3-opacity">Info</p>
+            <p>Check out all the faculty information who are on our institution.</p>
+            <input type="submit" value="View Faculties">
+         </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   The Contact Section 
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-left">CONTACT</h2>
+   
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i>Coimbatore-32<br>
+        <i class="fa fa-phone" style="width:30px"></i> 6380497971<br>
+        <i class="fa fa-envelope" style="width:30px"> </i>karpagam.kce.2022@gmail.com<br>
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+ 
+ End Page Content 
+</div>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
+
+-->
